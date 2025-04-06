@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cup cake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+       <h1>𝓒𝓾𝓹𝓬𝓪𝓴𝓮</h1> 
+    </header>
+    <main>
+        <a href="indexx.html">
+        <section class="image-gallery">
+      
+            <img src="firs.png" alt="Image 1">
+            <img src="second.png" alt="Image 1">
+            <img src="third.png" alt="Image 1">
+            <img src="fourth.png"alt="Image 1">
+            <img src="fifth.png" alt="Image 1">
+            <img src="sixth.png" alt="Image 1">
+           <img src="fund.jpeg" alt="Image 1">
+           <img src="fund1.jpeg" alt="Image 1">
+           <img src="fund2.jpeg" alt="Image 1">
+           <img src="fund3.jpeg" alt="Image 1">
+           <img src="fund4.jpeg" alt="Image 1">
+
+        </a>
+
+
+
+
+
+
+
+
+
+
+
+           
+        </section>
+    </main>
+    <button id="scrollUpBtn" title="Go to top">↑</button>
+
+    <footer>
+        <!-- <p>&copy; 2025 Sweet Side</p> -->
+        <a href="https://web.whatsapp.com/" target="_blank">📱 WhatsApp</a>
+        <a href="https://www.instagram.com/thesweetside_fs/" target="_blank">📷 Instagram</a>
+        <a href="https://www.tiktok.com/@thesweetside_fs" target="_blank">🎵 TikTok</a>
+    </footer>
+    <style>
+        #scrollUpBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from the bottom */
+  right: 4px; /* Distance from the right */
+  z-index: 99; /* Ensure it’s on top of other content */
+  font-size: 18px; /* Increase font size */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #555; /* Button background */
+  color: white; /* Text color */
+  cursor: pointer; /* Mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#scrollUpBtn:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+        /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color:  #ffdfdf;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Image Gallery styling */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    background-color: #ffc3c3; /* Dark background */
+  color: white; /* White text */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  justify-content: space-between;
+  
+}
+
+    </style>
+<script>
+    // Show the button after scrolling 20px down from the top
+    window.onscroll = function() { scrollFunction() };
+    
+    function scrollFunction() {
+      const scrollBtn = document.getElementById("scrollUpBtn");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block"; // Show the button
+      } else {
+        scrollBtn.style.display = "none"; // Hide the button
+      }
+    }
+    
+    // Smooth scroll to top when the button is clicked
+    document.getElementById("scrollUpBtn").addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    </script>
+
+</body>
+</html>

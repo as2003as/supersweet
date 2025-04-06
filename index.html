@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+      <img class="logo" src="logo.png">
+
+              <nav>
+            <!-- <a href="#home">Home</a> -->
+            <!-- <a href="#about">About</a> -->
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <a href="#order" class="order-now">Order Now</a>
+        </nav>
+       
+    </header>
+
+    <section id="home">
+        <!-- <h2>Custom Cakes Made With Love</h2> -->
+        <h2>𝓘𝓷𝓭𝓲𝓿𝓲𝓭𝓾𝓮𝓵𝓵𝓮 𝓚𝓾𝓬𝓱𝓮𝓷 𝓶𝓲𝓽 𝓛𝓲𝓮𝓫𝓮 𝓰𝓮𝓶𝓪𝓬𝓱𝓽</h2>
+        <p>Wählen Sie aus unserer köstlichen Tortenauswahl und gestalten Sie diese ganz nach Ihren Wünschen. Perfekt für jeden Anlass!</p>
+        <!-- <p>Choose from our delicious selection of cakes and customize them to your liking. Perfect for any occasion!</p> -->
+        <a href="cakes.html">    <button> unsere Kuchen</button> </a>
+        <a href="cupcake.html">    <button> unsere Cupcake</button> </a>
+        <a href="idea.html">    <button> JETZT BESTELLEN!</button> </a>
+
+    </section>
+
+    <section id="cakes">
+        <!-- <h2>Our Cake Collection</h2> -->
+        
+        <div class="cake-list">
+            <div class="cake-item">
+         <a href="idea.html"  >  <img class="foto" src="ch.jpg">  </a>
+                <h3>Schokoladengenuss</h3>
+                <p>Reichhaltiger Schokoladenkuchen mit Schokoladenganache</p>
+                <p>für sechs Personen</p>
+                <strong> <p>29.99 €</p>  </strong>
+              
+            </div>
+            <div class="cake-item">
+         <a href="idea.html">     <img class="foto" src="Vanilla-Cake-SQ.jpg">   </a>
+                <h3>Vanilletraum</h3>
+                <p>Leichter Vanillekuchen mit Buttercreme-Frosting</p>
+                <p>für zehn Personen</p>
+          <strong >    <p>39.99 €</p> </strong>
+            </div>
+            <div class="cake-item">
+           <a href="idea.html">   <img class="foto" src="st.jpg"> </a>
+                <h3>Erdbeerkuchen</h3>
+                <p>Erdbeerkuchen mit frischem Erdbeer-Topping</p>
+                <p>für zwölf Personen</p>
+          <strong >    <p>39.99 €</p> </strong>
+
+            </div>
+            <div class="cake-item">
+              <a href="idea.html">     <img class="foto" src="cupcakes.png">   </a>
+                     <h3>Cup Cakes</h3>
+                     <p>jede Geschmacksrichtung für Ihren Cupcake</p>
+                    <strong> <p>20.00 € </p></strong>
+                 </div>
+        </div>
+    </section>
+
+
+
+
+  
+
+    <footer>
+      
+      <table>
+          <thead>
+              <tr>
+                  <th>Sweet Delights</th>
+                  <th>Contact Us</th>
+                  <th>Opening Hours</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Wir kreieren seit 2018 individuelle Torten für alle Ihre besonderen Anlässe.</td>
+                  <td>
+                    <a href="+49 1575 4820227" target="_blank">📱 WhatsApp</a> <br>
+                    <a href="https://www.instagram.com/thesweetside_fs/" target="_blank">📷 Instagram</a>
+                    <a href="https://www.tiktok.com/@thesweetside_fs" target="_blank">🎵 TikTok</a>
+                  </td>
+                  <td>
+                    Montag–Freitag: 8–18 Uhr <br>
+                    Samstag: 10–16 Uhr <br>
+                    Sonntag: Geschlossen
+                  </td>
+              </tr>
+              
+          </tbody>
+      </table>
+      <br> <div class="border"> </div>
+     
+        <p>© 2025 The Sweet Side. <br>
+             <!-- All rights reserved. Made with love -->
+             Alle Rechte vorbehalten. Mit Liebe gemacht   .</p>
+    
+  </footer>
+
+
+    <script >
+
+document.getElementById('cake-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const cakeType = document.getElementById('cake-type').value;
+  const color = document.querySelector('.color-options button.active')?.dataset.color;
+  const shape = document.querySelector('.shape-options button.active')?.dataset.shape;
+  const size = document.querySelector('.size-options button.active')?.dataset.size;
+  const instructions = document.getElementById('instructions').value;
+
+  alert(`Order Summary:\nCake: ${cakeType}\nColor: ${color}\nShape: ${shape}\nSize: ${size}\nInstructions: ${instructions}`);
+});
+
+document.querySelectorAll('.color-options button, .shape-options button, .size-options button').forEach(button => {
+  button.addEventListener('click', function() {
+      document.querySelectorAll('.color-options button, .shape-options button, .size-options button').forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+  });
+});
+
+function toggleMenu() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('active');
+}
+
+</script>
+<style> 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffdfdf;
+  color: #333;
+}
+
+header {
+  background-color: #ffd5d5; /* Light pink background */
+  padding: 10px 20px; /* Padding for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+nav {
+  display: flex;
+  /* justify-content: center; */
+  /* margin-bottom: 20px; */
+  gap: 20px;
+}
+
+nav a {
+  /* margin: 0 15px;
+  text-decoration: none;
+  color: #333; */
+  text-decoration: none;
+    color: #333; /* Dark text color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #d9534f; /* Red color on hover */
+}
+
+.order-now {
+  font-weight: bold;
+}
+
+h1, h2 {
+  color: #d9534f;
+
+}
+h1{
+  text-align: center;
+}
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.cake-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.cake-item {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+}
+
+.color-options, .shape-options, .size-options {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d9534f;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c9302c;
+}
+
+textarea {
+  width: 80%;
+  height: 100px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+.foto{
+  width: 250px;
+  height: auto;
+}
+.logo{
+  width: 150px;
+  height: 130px;
+  
+}
+
+footer {
+  background-color: #ffc3c3; /* Dark background */
+  color: white; /* White text */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer table {
+  width: 100%;
+  border-collapse: collapse; /* Remove spacing between table cells */
+}
+
+footer th, footer td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top; /* Align content to the top of the cell */
+}
+
+footer th {
+  font-size: 18px; /* Larger font size for headers */
+  font-weight: bold;
+ 
+}
+
+footer td {
+  font-size: 14px; /* Smaller font size for content */
+  line-height: 1.6; /* Spacing between lines */
+}
+
+footer a {
+  color: #d9534f; /* Red color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.border{
+  /* border: 1px dashed red; */
+  border-bottom: 2px solid #d9534f;
+}
+
+@media (max-width: 768px) {
+  /* Hide the regular navigation on mobile */
+  nav {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 30px; /* Adjust based on header height */
+      right: 20px;
+      background-color: #ffcccb;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show the hamburger menu on mobile */
+  .hamburger-menu {
+      display: flex;
+  }
+
+  /* Show the navigation when the menu is toggled */
+  nav.active {
+      display: flex;
+  }
+  .footer-content {
+    flex-direction: column; /* Stack sections vertically on mobile */
+    align-items: center;
+    text-align: center;
+}
+
+.footer-section {
+    text-align: center; /* Center text on mobile */
+}
+h1{text-align: center;}
+.logo{
+  width: 150px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+</style>
+
+</body>
+</html>
